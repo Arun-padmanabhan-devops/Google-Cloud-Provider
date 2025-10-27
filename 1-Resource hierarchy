@@ -1,0 +1,65 @@
+# 🌐 Google Cloud Platform (GCP) Resource Hierarchy
+
+![GCP](https://img.shields.io/badge/GCP-Google%20Cloud-blue?logo=googlecloud)
+![Docs](https://img.shields.io/badge/Type-Documentation-success)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+![Made with ❤️](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red)
+
+Google Cloud Platform (GCP) organizes its resources in a **hierarchical structure** to help manage access control, billing, and policies efficiently.
+
+---
+
+## 🏗️ Hierarchy Overview :
+
+The hierarchy has **four main levels** (from top to bottom):
+
+Organization → Folder(s) → Project(s) → Resource(s)
+
+---
+
+## 🔝 1. Organization (Root Node)
+
+- **Top-most node** in the hierarchy.
+- Represents your entire company or domain, e.g. `example.com`.
+- Policies (like IAM roles or organization policies) set here apply to **everything** below.
+- Managed by **Organization Administrators**.
+
+## 🗂️ 2. Folders
+
+- Optional layer to **group projects** logically.
+- Can be nested to reflect departments, teams, or environments (e.g., *Finance → Production → GCP Project*).
+- Useful for delegating admin rights to departments or managing policy inheritance.
+
+## 📦 3. Projects
+
+- The **core unit** of resource organization and management in GCP.
+- Every GCP resource (VM, storage bucket, etc.) must belong to a **single project**.
+- Each project has:
+  - **Project ID** (unique globally)
+  - **Project Name**
+  - **Project Number**
+- Billing, APIs, and IAM roles are managed at the **project level**.
+
+## ⚙️ 4. Resources
+
+- These are the **actual GCP services** you create and use — like Compute Engine VMs, Cloud Storage buckets, BigQuery datasets, etc.
+- They live **inside a project**.
+- Access control is inherited from the project and above.
+
+
+---
+
+## 🔐 IAM Policy Inheritance
+
+- IAM (Identity and Access Management) **policies cascade down** the hierarchy.
+  - A role granted at the **Organization** level applies to all folders, projects, and resources beneath it.
+  - Lower levels can override or add more specific roles.
+
+
+
+
+
+
+
+
