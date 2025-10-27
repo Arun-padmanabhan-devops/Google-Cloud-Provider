@@ -1,59 +1,73 @@
-# 🌐 Google Cloud Platform (GCP) Resource Hierarchy
+<h1 align="center">🌐 Google Cloud Platform (GCP) Resource Hierarchy</h1>
 
-Google Cloud Platform (GCP) organizes its resources in a **hierarchical structure** to help manage access control, billing, and policies efficiently.
+<p align="center" style="font-size: 18px;">
+Google Cloud Platform (GCP) organizes its resources in a <b>hierarchical structure</b> 
+to help manage <b>access control</b>, <b>billing</b>, and <b>policies</b> efficiently.
+</p>
 
-----------------------------------------------------------------------------------------------------------------------------------------------------
+<hr>
 
-## 🏗️ Hierarchy Overview :
+<h2>🏗️ Hierarchy Overview :</h2>
 
-The hierarchy has **four main levels** (from top to bottom):
+<p style="font-size: 16px;">
+The hierarchy has <b>four main levels</b> (from top to bottom):
+</p>
 
-Organization → Folder(s) → Project(s) → Resource(s)
+<p style="font-size: 18px; text-align:center;">
+<b>Organization → Folder(s) → Project(s) → Resource(s)</b>
+</p>
 
----
+<hr>
 
-## 🔝 1. Organization (Root Node)
+<h2>🔝 1. Organization (Root Node)</h2>
 
-- **Top-most node** in the hierarchy.
-- Represents your entire company or domain, e.g. `example.com`.
-- Policies (like IAM roles or organization policies) set here apply to **everything** below.
-- Managed by **Organization Administrators**.
+<ul style="font-size: 16px;">
+<li><b>Top-most node</b> in the hierarchy.</li>
+<li>Represents your entire company or domain, e.g. <code>example.com</code>.</li>
+<li>Policies (like IAM roles or organization policies) set here apply to <b>everything below</b>.</li>
+<li>Managed by <b>Organization Administrators</b>.</li>
+</ul>
 
-## 🗂️ 2. Folders
+<h2>🗂️ 2. Folders</h2>
 
-- Optional layer to **group projects** logically.
-- Can be nested to reflect departments, teams, or environments (e.g., *Finance → Production → GCP Project*).
-- Useful for delegating admin rights to departments or managing policy inheritance.
+<ul style="font-size: 16px;">
+<li>Optional layer to <b>group projects</b> logically.</li>
+<li>Can be nested to reflect departments, teams, or environments 
+(e.g., <i>Finance → Production → GCP Project</i>).</li>
+<li>Useful for delegating admin rights to departments or managing policy inheritance.</li>
+</ul>
 
-## 📦 3. Projects
+<h2>📦 3. Projects</h2>
 
-- The **core unit** of resource organization and management in GCP.
-- Every GCP resource (VM, storage bucket, etc.) must belong to a **single project**.
-- Each project has:
-  - **Project ID** (unique globally)
-  - **Project Name**
-  - **Project Number**
-- Billing, APIs, and IAM roles are managed at the **project level**.
+<ul style="font-size: 16px;">
+<li>The <b>core unit</b> of resource organization and management in GCP.</li>
+<li>Every GCP resource (VM, storage bucket, etc.) must belong to a <b>single project</b>.</li>
+<li>Each project has:
+  <ul>
+    <li><b>Project ID</b> (unique globally)</li>
+    <li><b>Project Name</b></li>
+    <li><b>Project Number</b></li>
+  </ul>
+</li>
+<li>Billing, APIs, and IAM roles are managed at the <b>project level</b>.</li>
+</ul>
 
-## ⚙️ 4. Resources
+<h2>⚙️ 4. Resources</h2>
 
-- These are the **actual GCP services** you create and use — like Compute Engine VMs, Cloud Storage buckets, BigQuery datasets, etc.
-- They live **inside a project**.
-- Access control is inherited from the project and above.
+<ul style="font-size: 16px;">
+<li>These are the <b>actual GCP services</b> you create and use — like Compute Engine VMs, 
+Cloud Storage buckets, BigQuery datasets, etc.</li>
+<li>They live <b>inside a project</b>.</li>
+<li>Access control is inherited from the project and above.</li>
+</ul>
 
+<hr>
 
----
+<h2>🔐 IAM Policy Inheritance</h2>
 
-## 🔐 IAM Policy Inheritance
-
-- IAM (Identity and Access Management) **policies cascade down** the hierarchy.
-  - A role granted at the **Organization** level applies to all folders, projects, and resources beneath it.
-  - Lower levels can override or add more specific roles.
-
-
-
-
-
-
-
-
+<ul style="font-size: 16px;">
+<li>IAM (Identity and Access Management) <b>policies cascade down</b> the hierarchy.</li>
+<li>A role granted at the <b>Organization level</b> applies to all folders, projects, 
+and resources beneath it.</li>
+<li>Lower levels can override or add more specific roles.</li>
+</ul>
