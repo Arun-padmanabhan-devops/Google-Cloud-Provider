@@ -1,6 +1,6 @@
-<h1 align="center">🌐 Google Cloud Platform (GCP) Resource Hierarchy</h1>
+<h1> 🌐 Google Cloud Platform (GCP) Resource Hierarchy </h1>
 
-<p align="center" style="font-size: 18px;">
+
 Google Cloud Platform (GCP) organizes its resources in a <b>hierarchical structure</b> 
 to help manage <b>access control</b>, <b>billing</b>, and <b>policies</b> efficiently.
 </p>
